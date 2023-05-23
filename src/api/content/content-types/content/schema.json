@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contents",
+  "info": {
+    "singularName": "content",
+    "pluralName": "contents",
+    "displayName": "content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "imdb": {
+      "type": "decimal"
+    },
+    "metascore": {
+      "type": "integer"
+    },
+    "poster": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "movie",
+        "tv_series"
+      ]
+    },
+    "tops": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::top.top",
+      "mappedBy": "contents"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::review.review",
+      "inversedBy": "contents"
+    },
+    "platforms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::platform.platform",
+      "inversedBy": "contents"
+    },
+    "votes": {
+      "type": "integer"
+    },
+    "runtime": {
+      "type": "integer"
+    },
+    "certificate": {
+      "type": "string"
+    },
+    "pub_year": {
+      "type": "string"
+    },
+    "imdb_url": {
+      "type": "string"
+    },
+    "imdb_id": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "string"
+    }
+  }
+}

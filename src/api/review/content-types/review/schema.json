@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "review",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "image": {
+      "type": "string"
+    },
+    "trailer": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "contents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::content.content",
+      "mappedBy": "reviews"
+    },
+    "platform": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::platform.platform",
+      "inversedBy": "reviews"
+    },
+    "director": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "reviews"
+    }
+  }
+}
