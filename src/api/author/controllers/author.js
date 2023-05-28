@@ -1,12 +1,12 @@
 "use strict";
 
 /**
- * autores controller
+ * author controller
  */
 
 const { createCoreController } = require("@strapi/strapi").factories;
 
-const uid = "api::autores.autores";
+const uid = "api::author.author";
 
 const components = {
   contents: true,
