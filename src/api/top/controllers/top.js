@@ -1,45 +1,49 @@
-'use strict';
+"use strict";
 
 /**
  * top controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-const uid = 'api::top.top'
+const uid = "api::top.top";
 
 const components = {
-  contents: true,
-}
+  contents: {
+    populate: {
+      reviews: true,
+    },
+  },
+};
 
 module.exports = createCoreController(uid, () => {
   return {
     async find(ctx) {
-      if (ctx.query.populate === '*') {
+      if (ctx.query.populate === "*") {
         const entity = await strapi.entityService.findMany(uid, {
           ...ctx.query,
           populate: components,
-        })
-        const sanitizedEntity = await this.sanitizeOutput(entity, ctx)
+        });
+        const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
 
-        return this.transformResponse(sanitizedEntity)
+        return this.transformResponse(sanitizedEntity);
       }
-      return super.find(ctx)
+      return super.find(ctx);
     },
     async findOne(ctx) {
-      const { id } = ctx.request.params
+      const { id } = ctx.request.params;
 
-      if (ctx.query.populate === '*') {
+      if (ctx.query.populate === "*") {
         const entity = await strapi.entityService.findOne(uid, id, {
           ...ctx.query,
           populate: components,
-        })
-        const sanitizedEntity = await this.sanitizeOutput(entity, ctx)
+        });
+        const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
 
-        return this.transformResponse(sanitizedEntity)
+        return this.transformResponse(sanitizedEntity);
       }
 
-      return super.findOne(ctx)
+      return super.findOne(ctx);
     },
-  }
-})
+  };
+});
