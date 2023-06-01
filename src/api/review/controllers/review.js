@@ -10,6 +10,7 @@ const uid = "api::review.review";
 
 const components = {
   author: true,
+  contents: true,
 };
 
 module.exports = createCoreController(uid, () => {
