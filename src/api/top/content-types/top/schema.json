@@ -24,10 +24,10 @@
       "target": "api::content.content",
       "inversedBy": "tops"
     },
-    "description_series": {
+    "description_movies": {
       "type": "richtext"
     },
-    "description_movies": {
+    "description_series": {
       "type": "richtext"
     }
   }
