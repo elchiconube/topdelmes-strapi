@@ -23,6 +23,12 @@
       "relation": "manyToMany",
       "target": "api::content.content",
       "inversedBy": "tops"
+    },
+    "description_series": {
+      "type": "richtext"
+    },
+    "description_movies": {
+      "type": "richtext"
     }
   }
 }
