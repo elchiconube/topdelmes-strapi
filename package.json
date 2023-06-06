@@ -2,7 +2,7 @@
   "name": "strapi",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "topdelmes cms",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -10,7 +10,6 @@
     "strapi": "strapi"
   },
   "devDependencies": {
-    "better-sqlite3": "7.4.6"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.5.5",
@@ -21,7 +20,7 @@
     "pg-connection-string": "^2.5.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Oscar Bustos"
   },
   "strapi": {
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
