@@ -76,6 +76,9 @@
     },
     "genre": {
       "type": "string"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }
