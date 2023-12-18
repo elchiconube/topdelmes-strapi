@@ -59,6 +59,9 @@
     "votes": {
       "type": "integer"
     },
+    "duration":{
+      "type": "string"
+    },
     "runtime": {
       "type": "integer"
     },
