@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "devDependencies": {
+    "sqlite3": "^5.1.6"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.5.5",
